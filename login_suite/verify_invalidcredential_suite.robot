@@ -7,10 +7,13 @@ Resource         ../Resource/Base/CommonFunctionality.resource
 Test Teardown       Close Browser
 
 *** Test Cases ***
-Verify Valid Credential Test
+Verify Invalid Credential Test
               Launch Browser
               Input Text      id=txtUsername   sam
               Input Password     id=txtPassword    pass123
               Click Element       id=btnLogin
+              Element Text Should Be    id=spanMessage    Invalid credentials
+
+
 
 
