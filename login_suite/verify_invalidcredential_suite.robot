@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This suite will handle all the test cases related to valid
+Documentation    This suite will handle all the test cases related to invalid
 ...     credential test for orangehrm.Test case -TC_OH_3
 
 
