@@ -1,80 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220317 13:59:49.782" rpa="false" schemaversion="2">
-<suite id="s1" name="Verify Validcredential Suite" source="D:\ROBOT-SESSION\ROBOT_FRAMEWORK\login_suite\verify_validcredential_suite.robot">
-<test id="s1-t1" name="Verify Valid Credential Test">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220317 14:22:01.157" rpa="false" schemaversion="2">
+<suite id="s1" name="Verify Invalidcredential Suite" source="D:\ROBOT-SESSION\ROBOT_FRAMEWORK\login_suite\verify_invalidcredential_suite.robot">
+<test id="s1-t1" name="TC1">
 <kw name="Launch Browser" library="CommonFunctionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220317 13:59:50.339" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220317 13:59:50.338" endtime="20220317 13:59:54.966"/>
+<msg timestamp="20220317 14:22:01.785" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220317 14:22:01.783" endtime="20220317 14:22:04.379"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220317 13:59:54.967" endtime="20220317 13:59:55.120"/>
+<status status="PASS" starttime="20220317 14:22:04.379" endtime="20220317 14:22:04.517"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220317 13:59:55.121" endtime="20220317 13:59:55.126"/>
+<status status="PASS" starttime="20220317 14:22:04.517" endtime="20220317 14:22:04.520"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220317 13:59:55.127" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
-<status status="PASS" starttime="20220317 13:59:55.127" endtime="20220317 14:00:01.330"/>
+<msg timestamp="20220317 14:22:04.520" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220317 14:22:04.520" endtime="20220317 14:22:10.666"/>
 </kw>
-<status status="PASS" starttime="20220317 13:59:50.337" endtime="20220317 14:00:01.330"/>
+<status status="PASS" starttime="20220317 14:22:01.783" endtime="20220317 14:22:10.667"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=txtUsername</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220317 14:00:01.333" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220317 14:00:01.332" endtime="20220317 14:00:01.617"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=txtPassword</arg>
-<arg>admin123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220317 14:00:01.619" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220317 14:00:01.699" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220317 14:00:01.777" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220317 14:00:01.618" endtime="20220317 14:00:01.777"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnLogin</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220317 14:00:01.778" level="INFO">Clicking element 'id=btnLogin'.</msg>
-<status status="PASS" starttime="20220317 14:00:01.778" endtime="20220317 14:00:06.978"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>My Info</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220317 14:00:07.037" level="INFO">Current page contains text 'My Info'.</msg>
-<status status="PASS" starttime="20220317 14:00:06.979" endtime="20220317 14:00:07.037"/>
+<kw name="John">
+<arg>john123</arg>
+<arg>Invalid credentials</arg>
+<msg timestamp="20220317 14:22:10.672" level="FAIL">No keyword with name 'John' found.</msg>
+<status status="FAIL" starttime="20220317 14:22:10.672" endtime="20220317 14:22:10.673"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220317 14:00:07.039" endtime="20220317 14:00:09.527"/>
+<status status="PASS" starttime="20220317 14:22:10.675" endtime="20220317 14:22:13.053"/>
 </kw>
-<status status="PASS" starttime="20220317 13:59:50.336" endtime="20220317 14:00:09.528"/>
+<status status="FAIL" starttime="20220317 14:22:01.781" endtime="20220317 14:22:13.054">No keyword with name 'John' found.</status>
 </test>
-<doc>This suite will handle all the test cases related to valid
-credential test for orangehrm.Test case -TC_OH_2</doc>
-<status status="PASS" starttime="20220317 13:59:49.786" endtime="20220317 14:00:09.534"/>
+<test id="s1-t2" name="TC2">
+<kw name="Launch Browser" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220317 14:22:13.060" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220317 14:22:13.059" endtime="20220317 14:22:15.839"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220317 14:22:15.839" endtime="20220317 14:22:15.973"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220317 14:22:15.973" endtime="20220317 14:22:15.977"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220317 14:22:15.980" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20220317 14:22:15.978" endtime="20220317 14:22:17.811"/>
+</kw>
+<status status="PASS" starttime="20220317 14:22:13.058" endtime="20220317 14:22:17.811"/>
+</kw>
+<kw name="Peter">
+<arg>peter123</arg>
+<arg>Invalid credentials</arg>
+<msg timestamp="20220317 14:22:17.823" level="FAIL">No keyword with name 'Peter' found.</msg>
+<status status="FAIL" starttime="20220317 14:22:17.823" endtime="20220317 14:22:17.823"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220317 14:22:17.825" endtime="20220317 14:22:20.199"/>
+</kw>
+<status status="FAIL" starttime="20220317 14:22:13.057" endtime="20220317 14:22:20.201">No keyword with name 'Peter' found.</status>
+</test>
+<doc>This suite will handle all the test cases related to invalid
+credential test for orangehrm.Test case -TC_OH_3</doc>
+<status status="FAIL" starttime="20220317 14:22:01.166" endtime="20220317 14:22:20.207"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Verify Validcredential Suite">Verify Validcredential Suite</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Verify Invalidcredential Suite">Verify Invalidcredential Suite</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220317 14:22:01.025" level="ERROR">Error in file 'D:\ROBOT-SESSION\ROBOT_FRAMEWORK\login_suite\verify_invalidcredential_suite.robot' on line 10: Setting 'Test Template' accepts only one value, got 2.</msg>
+<msg timestamp="20220317 14:22:01.167" level="ERROR">Error in test case file 'D:\ROBOT-SESSION\ROBOT_FRAMEWORK\login_suite\verify_invalidcredential_suite.robot': Creating keyword 'Verify Invalid Credential Template' failed: Invalid argument specification: Invalid argument syntax '$(username}'.</msg>
 </errors>
 </robot>
